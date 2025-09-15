@@ -1,0 +1,42 @@
+<h2>Sign Up</h2>
+
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">Primeiro Nome:</label>
+            <input type="text" id="firstName" class="form-control" formControlName="firstNameTS"/>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" class="form-control" formControlName="lastNameTS"/>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" formControlName="emailTS"/>
+        </div>
+        <div class="form-group">
+            <label for="pass">Senha:</label>
+            <input type="password" id="pass" class="form-control" formControlName="passwordTS"/>
+        </div>
+        <div class="form-group">
+            <label for="genero">Gênero:</label>
+            <select id="genero" formControlName="genderTS" class="form-control">
+                <option value="">-- Selecione --</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+        </div>
+        <div class="form-group">   
+            <label>Tipo de Conta:</label>
+            <input type="radio" id="tipoPessoal" value="Pessoal" formControlName="accountTypeTS"/>
+            <label for="tipoPessoal">Pessoal</label>
+            <input type="radio" id="tipoEmpresarial" value="Empresarial" formControlName="accountTypeTS"/>
+            <label for="tipoEmpresarial">Empresarial</label>
+        </div>
+        <div class="form-group">
+            <label for="notification">Deseja receber notificações?</label>
+            <input type="checkbox" id="notification" formControlName="notificationTS"/>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Cadastrar</button>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<article class="panel panel-default">
+    <div class="panel-body">
+        {{ varMensagem.content }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <img src="../../assets/img/{{varMensagem.username}}.png" alt="User Image" class="user-image">
+            {{ varMensagem.username }}
+        </div>
+        <div class="config">
+            <a (click)="onEdit()" style="cursor: pointer;">Edit</a>
+            <a (click)="onDelete()" style="cursor: pointer;">Delete</a>
+        </div>
+    </footer>
+</article>
